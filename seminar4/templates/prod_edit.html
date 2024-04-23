@@ -1,0 +1,13 @@
+{% extends 'base_temp.html' %}
+{% block title %}Edit product{% endblock %}
+{% block content %}
+      {% if not answer %}
+    <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Обновить">
+    </form>
+      {% else %}
+       {{ answer }}
+    {% endif %}
+{% endblock %}

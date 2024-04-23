@@ -1,0 +1,9 @@
+{% extends 'base_temp.html' %}
+{% load static %}
+{% block title %}{{ product.name }}{% endblock %}
+{% block content %}
+    <h3>{{ product.name }}</h3>
+    <p>{{ product.description }}</p>
+    <p>{{ product.price }}</p>
+    <img style="max-width: 350px;" src="{{ product.img.url}}"></img>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base_temp.html' %}
+{% block title %}Form2{% endblock %}
+{% block content %}
+      {% if not answer %}
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Send">
+    </form>
+      {% else %}
+       {{ answer }}
+    {% endif %}
+{% endblock %}
